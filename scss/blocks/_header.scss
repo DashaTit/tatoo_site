@@ -1,0 +1,226 @@
+@import "../scss/colors/colors";
+
+// slider switch
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+}
+.slider {
+  margin-top: 47px;
+  float: left;
+  .arrow_top, .arrow_down {
+    border: 1.5px $orange solid;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+
+    &::before {
+      content: url(/img/header/arrow.svg);
+      margin-left: 15px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .slider_counts {
+    margin-left: 12px;
+    border: 1.5px $dark-orange solid;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+
+  .slider_counts.active {
+    background-color: $orange;
+  }
+}
+
+.arrow_down {
+  rotate: 180deg;
+}
+
+.header_text_block {
+  width: 594px;
+  height: 380px;
+  background-color: transparent;
+}
+
+.header_main_text {
+  @include forum(75px, $orange, 400);
+}
+
+.header_undertext {
+  margin-top: 41px;
+  @include jost(25px, $text-color, 400);
+  margin-bottom: 70px;
+}
+
+.header_btn {
+  background-color: $dark-orange;
+  border: 2px $orange solid;
+  padding: 18px 22px;
+  @include jost(20px, $text-color, 400);
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $orange;
+  }
+}
+
+.popup {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .75);
+  opacity: .75;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+  transform: translate(0px, -100%);
+
+
+  .popup_content {
+    background-color: rgba(238, 238, 238, 1);
+    max-width: 430px;
+    height: 100%;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+.popup.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+.popup_body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.logo_x {
+  width: 11px;
+  background-color: $bg-card2;
+  justify-content: right;
+}
+
+.personal_cap_title {
+  @include jost(30px, $dark, 500);
+  background-color: $text-color;
+  text-align: center;
+  background-color: $bg-card2;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.personal_cab_text {
+  @include jost(17px, $grey-2, 400);
+  text-align: left;
+  background-color: $bg-card2;
+  margin-bottom: 10px;
+}
+
+.tel_input {
+  background-color: $bg-card;
+  width: 340px;
+  height: 70px;
+  border: none;
+  @include jost(17px, $bg-color, 400);
+  &::placeholder {
+    @include jost(17px, $grey, 400);
+  }
+
+
+}
+
+.personal_cab_btn {
+  margin-top: 20px;
+  background-color: $dark-orange;
+  @include jost(20px, $text-color, 400);
+  padding: 18px 82px;
+  margin-bottom: 20px;
+  pointer-events: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.personal_cab_btn.active {
+  pointer-events: all;
+}
+
+.btn_x {
+  width: 11px;
+  text-align: right;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.privaty_policy, .text_privaty_policy {
+  background-color: $bg-card;
+  @include jost(13px, $grey-2, 400);
+}
+
+.privaty_policy {
+  display: flex;
+
+  .text_privaty_policy {
+    margin-left: 20px;
+  }
+
+  .personal_cab_checkbox {
+    background-color: $orange;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $orange;
+  }
+
+  .personal_cab_checkbox:checked {
+    background-color: $orange;
+  }
+}
+
+.modal_pin_code {
+  transform: translate(0px, 0px);
+
+  .pin_cod, .ok_number, .pin_cod_text, .no_code {
+    background-color: $bg-card2;
+  }
+}
+
+.pin_cod {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+
+  input {
+    border: 1px solid $orange;
+    width: 40px;
+    height: 40px;
+    @include jost(13px, $dark-orange, 400);
+  }
+}

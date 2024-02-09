@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../scss/main.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="nav_up">
+        <div class="contacts">
+          <div class="tel">
+            <a href="tel:+79525525252" class="tel_number">+7 952 552-52-52</a>
+          </div>
+          <div class="messangers">
+            <a href="#" class="viber">Viber</a>
+            <a href="#" class="whats_app">Whats App</a>
+            <a href="#" class="telegram">Telegram</a>
+          </div>
+        </div>
+        <div class="mail">
+          <a href="mailto:Mr.Driskell@mail.ru" class="mail_name">Mr.Driskell@mail.ru</a>
+        </div>
+        <div class="logo">
+          <img src="../img/navigation/logo.svg" alt="" class="logo_img">
+        </div>
+        <div class="basket">
+          <h2 class="basket_sum">37 280 ₽</h2>
+          <img src="../img/navigation/basket.svg" alt="" class="basket_icon">
+        </div>
+        <img src="../img/navigation/like.svg" alt="" class="liked">
+
+        <button class="personal"><img src="../img/navigation/personal.svg" alt="" class="personal"></button>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="nav_down">
+        <h2 class="catalog_text">Каталог</h2>
+
+        <div class="burger">
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+        </div>
+
+        <form role="search" method="get" action="/search">
+          <input class="search" type="search" name="search-text" placeholder="Поиск" />
+        </form>
+
+
+        <div class="main_navigation">
+          <ul>
+            <li class="nav_el"><a href="">Промокоды</a></li>
+            <li class="nav_el"><a href="">Скидки</a></li>
+            <li class="nav_el"><a href="">Помощь</a></li>
+            <li class="nav_el"><a href="">О нас</a></li>
+            <li class="nav_el"><a href="">Контакты</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
+    <header class="header">
+      <div class="header_text_block">
+        <h1 class="header_main_text">
+          Лучшие товары в мире татуировок
+        </h1>
+
+        <p class="header_undertext">
+          Оборудование и расходники <br>
+          для самых ярких и качественных работ
+        </p>
+
+        <button class="header_btn">Смотреть каталог</button>
+      </div>
+
+
+      <div class="slider">
+        <div class="arrow_top"></div>
+        <div class="slider_counts"></div>
+        <div class="slider_counts"></div>
+        <div class="slider_counts"></div>
+        <div class="slider_counts"></div>
+        <div class="slider_counts"></div>
+        <div class="arrow_down"></div>
+      </div>
+    </header>
+
+
+    <div class="popup personal_cab">
+      <div class="popup_body personal_cab_body">
+          <div class="popup_content">
+              <button class="btn_x"><img src="/img/header/x.svg" alt="" class="logo_x"></button>
+              <h1 class="personal_cap_title">Личный кабинет</h1>
+              <span class="personal_cab_text">Введите номер</span>
+              <input class="tel_input" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ">
+              <button class="personal_cab_btn">Получить код в SMS</button>
+              <form action="" class="privaty_policy">
+                <input type="checkbox" name="" class="personal_cab_checkbox" checked="checked">
+                <label for="" class="text_privaty_policy">При воходе или регистрации вы соглашаетесь <br> с условиями предоставления сервиса</label>
+              </form>
+          </div>
+      </div>
+    </div>
+
+    <div class="popup modal_pin_code">
+      <div class="popup_body pin_code_body">
+          <div class="popup_content pin_code_content">
+              <button class="btn_x"><img src="/img/header/x.svg" alt="" class="logo_x"></button>
+              <h1 class="personal_cap_title">Введите код</h1>
+              <div class="pin_cod">
+                <input type="text" class="number" autofocus>
+                <input type="text" class="number">
+                <input type="text" class="number">
+                <input type="text" class="number">
+                <button class="ok_number">Ok</button>
+              </div>
+
+              <p class="pin_cod_text">Вам потупит звонок на +7 (999)529-00-01 <br>
+                Введите последние 4 цифры звонящего номера. <br>
+                Получить новый код можно будет через 01:48</p>
+              <a href="" class="no_code">Не приходит код</a>
+              <form action="" class="privaty_policy">
+                <input type="checkbox" name="" class="personal_cab_checkbox" checked="checked">
+                <label for="" class="text_privaty_policy">При воходе или регистрации вы соглашаетесь <br> с условиями предоставления сервиса</label>
+              </form>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/imask"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

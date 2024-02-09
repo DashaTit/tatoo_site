@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@mixin montserrat($size, $color, $weight) { //MONTSERRAT
+  font-family: "montserrat", sans-serif;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin jost($size, $color, $weight) { //JOST
+  font-family: "jost", sans-serif;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin forum($size, $color, $weight) { //FORUM
+  font-family: "forum", sans-serif;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
