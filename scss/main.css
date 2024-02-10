@@ -401,22 +401,107 @@
 
 .modal_pin_code {
   transform: translate(0px, 0px);
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 0.5s ease 0s;
+  transform: translate(0px, -150%);
 }
-.modal_pin_code .pin_cod, .modal_pin_code .ok_number, .modal_pin_code .pin_cod_text, .modal_pin_code .no_code {
+.modal_pin_code .pin_cod, .modal_pin_code .pin_cod_text, .modal_pin_code .no_code, .modal_pin_code .tel_mask, .modal_pin_code .time, .modal_pin_code .min, .modal_pin_code .sec {
   background-color: #EEEEEE;
 }
 
-.pin_cod {
+.modal_pin_code.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+.pin_cod:not(.ok_number) {
   display: flex;
   justify-content: center;
-  margin-right: 10px;
+  background-color: #EEEEEE;
 }
-.pin_cod input {
+.pin_cod:not(.ok_number) input:not(.ok_number) {
   border: 1px solid #BB8C5F;
-  width: 40px;
-  height: 40px;
+  width: 36.5px;
+  height: 36.5px;
   font-family: "jost", sans-serif;
   color: #524336;
+  font-size: 25px;
+  font-weight: 400;
+  background-color: #EEEEEE;
+  margin-right: 10px;
+}
+.pin_cod:not(.ok_number) input:not(.ok_number):active {
+  border: 1px solid #524336;
+}
+
+.ok_number {
+  background-color: #BB8C5F;
+  font-family: "jost", sans-serif;
+  color: #EEEEEE;
+  font-size: 17px;
+  font-weight: 400;
+  width: 40px;
+  height: 40px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+.ok_number:hover {
+  background-color: #524336;
+}
+
+.pin_code_content {
+  background-color: #EEEEEE;
+  padding: 30px;
+}
+
+.pin_cod_text {
+  text-align: center;
+  font-family: "jost", sans-serif;
+  color: #3E424B;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.tel_mask, .time {
+  font-family: "jost", sans-serif;
+  color: #3E424B;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.tel_mask {
+  font-family: "jost", sans-serif;
+  color: #3E424B;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.no_code {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "jost", sans-serif;
+  color: #BB8C5F;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.text_privaty_policy {
+  font-family: "jost", sans-serif;
+  color: #636B78;
   font-size: 13px;
   font-weight: 400;
 }
@@ -485,4 +570,8 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a:hover {
+  cursor: pointer;
 }

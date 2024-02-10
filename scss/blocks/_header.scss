@@ -206,21 +206,90 @@
 
 .modal_pin_code {
   transform: translate(0px, 0px);
-
-  .pin_cod, .ok_number, .pin_cod_text, .no_code {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, .75);
+  transition: all 0.5s ease 0s;
+  transform: translate(0px, -150%);
+  .pin_cod, .pin_cod_text, .no_code, .tel_mask, .time, .min, .sec {
     background-color: $bg-card2;
   }
 }
 
-.pin_cod {
+.modal_pin_code.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+.pin_cod:not(.ok_number) {
   display: flex;
   justify-content: center;
-  margin-right: 10px;
+  background-color: $bg-card2;
 
-  input {
+  input:not(.ok_number) {
     border: 1px solid $orange;
-    width: 40px;
-    height: 40px;
-    @include jost(13px, $dark-orange, 400);
+    width: 36.5px;
+    height: 36.5px;
+    @include jost(25px, $dark-orange, 400);
+    background-color: $bg-card2;
+    margin-right: 10px;
+
+    &:active {
+      border: 1px solid $dark-orange;
+    }
   }
 }
+
+.ok_number {
+  background-color: $orange;
+  @include jost(17px, $bg-card2, 400);
+  width: 40px;
+  height: 40px;
+  border: none;
+  transition: all 0.5s ease 0s;
+
+  &:hover {
+    background-color: $dark-orange;
+  }
+}
+
+.pin_code_content {
+  background-color: $bg-card2;
+  padding: 30px;
+}
+
+.pin_cod_text {
+  text-align: center;
+  @include jost(17px, $dark, 400);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.tel_mask, .time {
+  @include jost(17px, $dark, 600);
+}
+
+.tel_mask {
+  @include jost(17px, $dark, 600);
+}
+
+.no_code {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  @include jost(20px, $orange, 400);
+  margin-bottom: 30px;
+}
+
+.text_privaty_policy {
+  @include jost(13px, $grey-2, 400)
+}
+

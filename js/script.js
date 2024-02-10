@@ -5,6 +5,13 @@ const bg = document.getElementsByClassName('popup_body')[0];
 const body = document.body;
 const telInput = document.querySelector('.tel_input');
 const phoneBtn = document.querySelector('.personal_cab_btn');
+const secPopup = document.querySelector('.modal_pin_code');
+let phoneNumber = '';
+const pinCode_btnX = document.querySelector('.pin_code_x')
+const telChange = document.querySelector('.tel_mask')
+const returnLink = document.querySelector('.no_code')
+const time = document.querySelector('.time')
+const bgCode = document.querySelector('.pin_code_body')
 //poppup
 document.body.style.overflowY = 'scroll';
 personal.addEventListener('click', {
@@ -41,4 +48,54 @@ telInput.addEventListener('input', function() {
   } else {
     phoneBtn.classList.remove('active');
   }
+});
+
+//LOGIN SMS  phoneBtn
+phoneBtn.addEventListener('click', function (e) {
+  console.log('sksk');
+  popup.classList.remove('open');
+  secPopup.classList.add('open');
+
+  console.log(mask.masked.value);
+  telChange.innerHTML = mask.masked.value;
+
+
+});
+
+
+pinCode_btnX.addEventListener('click', {
+  handleEvent(event) {
+    secPopup.classList.remove('open');
+    document.body.style.overflowY = 'scroll';
+  }
+});
+bg.addEventListener('click', function (e) {
+  if (e.target === bg) {
+    popup.classList.remove('open');
+    document.body.style.overflowY = 'scroll';
+  }
+});
+
+returnLink.addEventListener('click', function (e) {
+  secPopup.classList.remove('open');
+  popup.classList.add('open');
+
 })
+
+bgCode.addEventListener('click', function (e) {
+  if (e.target === bgCode) {
+    secPopup.classList.remove('open');
+    document.body.style.overflowY = 'scroll';
+  }
+});
+
+//TIME
+
+targetSec = 60;
+setTimeout(setTime, 1000)
+
+function setTime() {
+  time.innerHTML = targetSec;
+  targetSec-=1
+}
+

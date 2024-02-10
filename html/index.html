@@ -108,10 +108,10 @@
       </div>
     </div>
 
-    <div class="popup modal_pin_code">
+    <div class="modal_pin_code">
       <div class="popup_body pin_code_body">
           <div class="popup_content pin_code_content">
-              <button class="btn_x"><img src="/img/header/x.svg" alt="" class="logo_x"></button>
+              <button class="btn_x pin_code_x"><img src="/img/header/x.svg" alt="" class="logo_x"></button>
               <h1 class="personal_cap_title">Введите код</h1>
               <div class="pin_cod">
                 <input type="text" class="number" autofocus>
@@ -121,13 +121,14 @@
                 <button class="ok_number">Ok</button>
               </div>
 
-              <p class="pin_cod_text">Вам потупит звонок на +7 (999)529-00-01 <br>
+              <p class="pin_cod_text">Вам потупит звонок на <span class="tel_mask">+7 (999)529-00-01</span><br>
                 Введите последние 4 цифры звонящего номера. <br>
-                Получить новый код можно будет через 01:48</p>
-              <a href="" class="no_code">Не приходит код</a>
+                Получить новый код можно будет через <span class="time"></span></p>
+              <a class="no_code">Не приходит код</a>
               <form action="" class="privaty_policy">
-                <input type="checkbox" name="" class="personal_cab_checkbox" checked="checked">
-                <label for="" class="text_privaty_policy">При воходе или регистрации вы соглашаетесь <br> с условиями предоставления сервиса</label>
+                <input id="checkbox-id" type="checkbox" name="" class="personal_cab_checkbox" checked="checked">
+              
+                <label for="checkbox-id" class="text_privaty_policy">При воходе или регистрации вы соглашаетесь <br> с условиями предоставления сервиса</label>
               </form>
           </div>
       </div>
