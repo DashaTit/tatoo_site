@@ -1,10 +1,15 @@
 @import "../scss/colors/colors";
 
 // slider switch
+.bg-img {
+  width: 1216px;
+  height: 700px;
+}
 .header {
+  position: absolute;
   display: flex;
   justify-content: space-between;
-  margin-top: 120px;
+  margin-top: -600px;
 }
 .slider {
   margin-top: 47px;

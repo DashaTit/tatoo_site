@@ -45,6 +45,7 @@ telInput.addEventListener('input', function() {
   console.log('wk')
   if (mask.masked.isComplete) {
     phoneBtn.classList.add('active');
+    
   } else {
     phoneBtn.classList.remove('active');
   }
@@ -89,13 +90,32 @@ bgCode.addEventListener('click', function (e) {
   }
 });
 
-//TIME
+//TAB PRODUCT CARDS
+const tabText = document.querySelectorAll('.tab_text');
+const tabContent = document.querySelectorAll(".tab");
+const like = document.querySelector(".like_status")
 
-targetSec = 60;
-setTimeout(setTime, 1000)
+like.addEventListener("click", function() {
+  like.classList.add('active')
+})
 
-function setTime() {
-  time.innerHTML = targetSec;
-  targetSec-=1
-}
+tabText.forEach(function(item) {
+  item.addEventListener("click", function() {
+    console.log("click")
+    let currentLink = item;
+    let tabId = currentLink.getAttribute('data-tab');
+    let currentTab = document.querySelector(tabId);
 
+    tabText.forEach(function(item) {
+      item.classList.remove("active");
+    });
+
+    tabContent.forEach(function(item) {
+      item.classList.remove('active')
+    })
+    
+
+    currentLink.classList.add('active');
+    currentTab.classList.add("active");
+    })
+})

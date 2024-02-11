@@ -3,8 +3,14 @@
 @import "../scss/colors/colors";
 @import "../scss/blocks/header";
 @import "../scss/blocks/footer";
-* {
+@import "../scss/blocks/tabs";
+
+body {
   background-color: $bg-color;
+}
+
+.new-bg {
+  background-color: #E3E3E3;
 }
 
 .container {

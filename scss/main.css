@@ -184,10 +184,16 @@
   margin-right: 0;
 }
 
+.bg-img {
+  width: 1216px;
+  height: 700px;
+}
+
 .header {
+  position: absolute;
   display: flex;
   justify-content: space-between;
-  margin-top: 120px;
+  margin-top: -600px;
 }
 
 .slider {
@@ -506,8 +512,126 @@
   font-weight: 400;
 }
 
-* {
+.tab_text_main {
+  font-family: "jost", sans-serif;
+  color: #3E424B;
+  font-size: 30px;
+  font-weight: 500;
+  padding-top: 120px;
+}
+.tab_text_main .tab_text:not(:last-child) {
+  margin-right: 60px;
+}
+.tab_text_main .tab_text {
+  transition: all 0.3s ease-in;
+}
+.tab_text_main .tab_text:hover {
+  color: #BB8C5F;
+}
+
+.tab_text.active {
+  color: #BB8C5F;
+}
+
+.tab.active {
+  margin-top: 40px;
+  display: flex;
+}
+
+.tab {
+  display: none;
+}
+
+.product-card {
+  background-color: #fff;
+  width: 289px;
+  position: relative;
+}
+.product-card:not(:last-child) {
+  margin-right: 20px;
+}
+.product-card:hover {
+  box-shadow: 1px 10px 50px 0px rgba(34, 60, 80, 0.2);
+}
+.product-card:hover .put {
+  display: block;
+}
+
+.header_card {
+  display: flex;
+  left: 40px;
+  top: 34px;
+  position: absolute;
+  font-family: "jost", sans-serif;
+  color: #BB8C5F;
+  font-size: 15px;
+  font-weight: 400;
+  align-items: center;
+}
+
+.like_status {
+  background-image: url("../../img/tabs/like-default.svg");
+  width: 23px;
+  height: 19px;
+  background-repeat: no-repeat;
+  margin-left: 138px;
+}
+
+.like_status.active {
+  background-image: url("../../img/tabs/like-active.jpg");
+}
+
+.under_card {
+  margin-top: 22px;
+  margin-left: 30px;
+}
+
+.product_name {
+  font-family: "jost", sans-serif;
+  color: #3E424B;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.price {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+.price .now_price {
+  font-family: "jost", sans-serif;
+  color: #BB8C5F;
+  font-size: 24px;
+  font-weight: 700;
+}
+.price .discount {
+  margin-left: 10px;
+  font-family: "jost", sans-serif;
+  color: #636B78;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+
+.put {
+  display: none;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 8px 42px;
+  background-color: #EEEEEE;
+  border: 1px solid #BB8C5F;
+  font-family: "jost", sans-serif;
+  color: #BB8C5F;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body {
   background-color: #050402;
+}
+
+.new-bg {
+  background-color: #E3E3E3;
 }
 
 .container {
