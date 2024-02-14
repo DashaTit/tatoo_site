@@ -5,13 +5,15 @@
 @import "../scss/blocks/footer";
 @import "../scss/blocks/tabs";
 @import "../scss/blocks/catalog";
+@import "../scss/blocks/slider";
 
 body {
   background-color: $bg-color;
 }
 
 .new-bg {
-  background-color: #E3E3E3;
+    background-color: #E3E3E3;
+    width: 100%;
 }
 
 .container {

@@ -799,12 +799,50 @@
   font-weight: 400;
 }
 
+.slider_header {
+  font-family: "forum", sans-serif;
+  color: #3E424B;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.slider-brend {
+  padding-top: 115px;
+}
+
+.see_all p {
+  text-align: right;
+}
+
+.slider-block {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rotate-btn {
+  rotate: 180deg;
+}
+
+.brends-icons {
+  display: flex;
+  flex-direction: column;
+}
+.brends-icons img:not(:last-child) {
+  margin-right: 5px;
+}
+.brends-icons .f-line {
+  padding-bottom: 5px;
+}
+
 body {
   background-color: #050402;
 }
 
 .new-bg {
   background-color: #E3E3E3;
+  width: 100%;
 }
 
 .container {

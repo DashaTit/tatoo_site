@@ -1,0 +1,38 @@
+.slider_header {
+    @include forum(60px, $dark, 400)
+}
+
+.slider-brend {
+    padding-top:115px;
+}
+
+.see_all {
+    p {
+        text-align: right;
+    }
+}
+
+.slider-block {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rotate-btn {
+    rotate: 180deg;
+}
+
+.brends-icons {
+    display: flex;
+    flex-direction: column;
+    
+    img:not(:last-child) {
+        margin-right: 5px;
+    }
+
+    .f-line {
+        padding-bottom: 5px;
+    }
+
+
+}
