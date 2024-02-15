@@ -836,6 +836,49 @@
   padding-bottom: 5px;
 }
 
+.about_us_flex {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 120px;
+}
+.about_us_flex .img_about_us {
+  left: 0;
+  width: 100%;
+}
+.about_us_flex .img_about_us img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.about_us_header {
+  font-family: "forum", sans-serif;
+  color: #BB8C5F;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.about_us_text {
+  margin-left: 55px;
+}
+.about_us_text p {
+  margin-top: 20px;
+  font-family: "jost", sans-serif;
+  color: #3E424B;
+  font-size: 17px;
+  font-weight: 400;
+}
+.about_us_text button {
+  margin-top: 40px;
+  padding: 8px 42px;
+  background-color: #EEEEEE;
+  border: 1px solid #BB8C5F;
+  font-family: "jost", sans-serif;
+  color: #BB8C5F;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 body {
   background-color: #050402;
 }

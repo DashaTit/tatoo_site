@@ -1,0 +1,37 @@
+.about_us_flex {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 120px;
+
+    .img_about_us {
+
+        left: 0;
+        width: 100%;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    }
+}
+
+.about_us_header {
+    @include forum(50px, $orange, 400)
+}
+
+.about_us_text {
+    margin-left: 55px;
+    p {
+        margin-top: 20px;
+        @include jost(17px, $dark, 400);
+    }
+
+    button {
+        margin-top: 40px;     
+        padding: 8px 42px;
+        background-color: $bg-card2;
+        border: 1px solid $orange;
+        @include jost(20px, $orange, 400);
+    }
+}
