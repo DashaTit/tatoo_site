@@ -119,3 +119,34 @@ tabText.forEach(function(item) {
     currentTab.classList.add("active");
     })
 })
+
+// КАТАЛОГ
+const burgerMenu = document.querySelector(".burger");
+const burgerPopup = document.querySelector(".popup-burger");
+let burgerStatus = true;
+const categories = document.querySelector(".burger-categories");
+const brends = document.querySelector(".burger-brends");
+const headerCategories = document.querySelector(".header_categories");
+const headerBrends = document.querySelector(".header_brends")
+
+burgerMenu.addEventListener("click", function () {
+    burgerPopup.classList.toggle("active");
+    categories.classList.add("active");
+    brends.classList.remove("active");
+    headerCategories.classList.add("active");
+    headerBrends.classList.remove("active");
+})
+
+headerCategories.addEventListener("click", function () {
+    categories.classList.add("active");
+    brends.classList.remove("active");
+    headerCategories.classList.add("active");
+    headerBrends.classList.remove("active");
+})
+
+headerBrends.addEventListener("click", function () {
+    categories.classList.remove("active");
+    brends.classList.add("active");
+    headerCategories.classList.remove("active");
+    headerBrends.classList.add("active");
+})

@@ -42,20 +42,26 @@
   margin-right: 7px;
 }
 
+.mail_name {
+  font-family: "jost", sans-serif;
+  color: #FAF6F2;
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.3s ease-in;
+}
+.mail_name:hover {
+  color: #BB8C5F;
+}
+
 .mail {
   margin-top: 25px;
   margin-right: 140px;
+  transition: all 0.3s ease-in;
 }
 .mail:before {
   content: url("/img/navigation/envelop.svg");
   margin-right: 9px;
   vertical-align: middle;
-}
-.mail .mail_name {
-  font-family: "jost", sans-serif;
-  color: #FAF6F2;
-  font-size: 15px;
-  font-weight: 400;
 }
 .mail:hover {
   color: #BB8C5F;
@@ -78,6 +84,13 @@
   width: 19px;
   height: 20px;
 }
+.basket:hover {
+  cursor: pointer;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
 
 .liked {
   margin-top: 25px;
@@ -85,17 +98,20 @@
   width: 19px;
   margin-left: 58px;
 }
+.liked:hover {
+  cursor: pointer;
+}
 
 .personal {
   margin-top: 12px;
   height: 18px;
   width: 19px;
   margin-left: 28px;
-}
-
-.personal {
   border: none;
   background-color: transparent;
+}
+.personal:hover {
+  cursor: pointer;
 }
 
 .line {
@@ -182,6 +198,90 @@
 }
 .nav_el:last-child {
   margin-right: 0;
+}
+
+.header_categories, .header_brends {
+  transition: all 0.3s ease-in;
+}
+.header_categories:hover, .header_brends:hover {
+  color: #BB8C5F;
+  cursor: pointer;
+}
+
+.popup-burger {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: -100px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+}
+.popup-burger .burger_content {
+  font-family: "jost", sans-serif;
+  color: #3E424B;
+  font-size: 17px;
+  font-weight: 400;
+}
+.popup-burger .header_categories.active {
+  color: #BB8C5F;
+}
+.popup-burger .popup_header {
+  display: flex;
+  background-color: #F5F5F5;
+  padding: 50px;
+}
+.popup-burger .popup_header h1 {
+  margin-right: 30px;
+}
+
+.burger-categories {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.burger-brends {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup-burger.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.burger-categories.active {
+  background-color: #F5F5F5;
+  padding: 0px 50px;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+.burger-categories.active ul li {
+  margin-bottom: 15px;
+}
+.burger-categories.active ul:first-child {
+  margin-right: 30px;
+}
+
+.burger-brends.active {
+  width: 1120px;
+  margin-top: -205px;
+  background-color: #F5F5F5;
+  padding: 0px 50px;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+.burger-brends.active ul li {
+  margin-bottom: 15px;
+}
+.burger-brends.active ul {
+  margin-right: 30px;
+}
+
+.header_brends.active {
+  color: #BB8C5F;
 }
 
 .bg-img {

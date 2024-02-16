@@ -40,17 +40,24 @@
   margin-right: 7px;
 }
 
+.mail_name {
+    @include jost(15px, $text-color, 400);
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: $orange;
+    }
+}
+
 .mail {
   margin-top: 25px;
   margin-right: 140px;
+  transition: all 0.3s ease-in;
+
   &:before {
     content: url('/img/navigation/envelop.svg');
     margin-right: 9px;
     vertical-align: middle;
-  }
-
-  .mail_name {
-    @include jost(15px, $text-color, 400);
   }
 
   &:hover {
@@ -73,6 +80,16 @@
     width: 19px;
     height: 20px;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.logo {
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .liked {
@@ -80,6 +97,10 @@
   height: 18px;
   width: 19px;
   margin-left: 58px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .personal {
@@ -87,12 +108,14 @@
   height: 18px;
   width: 19px;
   margin-left: 28px;
-}
-
-.personal {
   border: none;
   background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
+
 
 .line {
   margin-top: 10px;
@@ -173,4 +196,99 @@
     margin-right: 0;
   }
 
+}
+
+.header_categories, .header_brends {
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $orange;
+    cursor: pointer;
+  }
+}
+
+.popup-burger {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: -100px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+
+  .burger_content {
+    @include jost(17px, $dark, 400);
+  }
+
+  .header_categories.active {
+    color: $orange;
+  }
+
+  .popup_header {
+    display: flex;
+    background-color: $bg-card;
+    padding: 50px;
+    h1 {
+      margin-right: 30px;
+    }
+  }
+
+  
+}
+
+.burger-categories {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.burger-brends {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup-burger.active {
+  visibility: visible;
+  opacity: 1;
+} 
+
+.burger-categories.active {
+  background-color: $bg-card;
+  padding: 0px 50px;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+
+  ul {
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  ul:first-child {
+    margin-right: 30px;
+  }
+}
+
+.burger-brends.active {
+  width: 1120px;
+  margin-top: -205px;
+  background-color: $bg-card;
+  padding: 0px 50px;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+
+  ul {
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  ul {
+    margin-right: 30px;
+  }
+}
+
+.header_brends.active {
+  color: $orange;
 }
