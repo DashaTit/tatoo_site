@@ -23,6 +23,7 @@
 .tab.active {
   margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tab {
@@ -32,20 +33,27 @@
   &:not(:last-child) {
     margin-right: 20px;
   }
-  background-color: #fff;
+
   width: 289px;
   position: relative;
 
   &:hover {
-    box-shadow: 1px 10px 50px 0px rgba(34, 60, 80, 0.2);
-    .put {
-      display: block;
+    .put_bg {
+        visibility:visible;
+        opacity: 1;
     }
   }
+
 } 
+
+.card-img {
+    width: 289px;
+    background-color: $bg-card2;
+}
 
 
 .header_card {
+
   display: flex;
   left: 40px;
   top: 34px;
@@ -66,8 +74,10 @@
 }
 
 .under_card {
-  margin-top: 22px;
-  margin-left: 30px;
+    margin-top: -5px;
+  background-color: #fff;
+  padding-top: 22px;
+  padding-left: 30px;
 }
 
 .product_name {
@@ -91,21 +101,37 @@
   }
 }
 
-.put {
-  display: none;
-  margin-top: 20px;
-  margin-left: 15px;
-  padding: 8px 42px;
-  background-color: $bg-card2;
-  border: 1px solid $orange;
-  @include jost(20px, $orange, 400);
+.put_bg {
+    width: 289px;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
 
-  &:hover {
-    background-color: $bg-card;
-  }
+    .put {
+        cursor: pointer;
+        margin-bottom: 30px;
+      margin-top: 20px;
+      margin-left: 15px;
+      padding: 8px 42px;
+      background-color: $bg-card2;
+      border: 1px solid $orange;
+      @include jost(20px, $orange, 400);
+    
+      &:hover {
+        background-color: $bg-card;
+      }
+    }
 }
 
+
 .show_more {
+    cursor: pointer;
+      margin-left: 15px;
+      padding: 8px 42px;
+      background-color: $bg-card2;
+      border: 1px solid $orange;
+      @include jost(20px, $orange, 400);
   margin-top: 50px;
   display: block;
   margin-left: auto;

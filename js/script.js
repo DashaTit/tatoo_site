@@ -96,7 +96,7 @@ const tabContent = document.querySelectorAll(".tab");
 const like = document.querySelector(".like_status")
 
 like.addEventListener("click", function() {
-  like.classList.add('active')
+  like.classList.toggle('active')
 })
 
 tabText.forEach(function(item) {

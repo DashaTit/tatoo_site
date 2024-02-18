@@ -1,0 +1,75 @@
+.info {
+    display: flex;
+}
+
+footer {
+    @include montserrat(20px, $text-color, 500);
+    height: 400px;
+
+
+    .footer-blocks {
+        height: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        margin-left: 80px;
+
+        li:not(:last-child) {
+            margin-bottom: 40px;
+            
+        }
+
+        li {
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                cursor: pointer;
+                color: $orange;
+            }
+        }
+    }
+}
+
+.footer_logo {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+
+.privaty {
+    margin-top: 50px;
+    @include montserrat(14px, $text-color, 500);
+
+    &:hover {
+        cursor: pointer;
+        color: $orange;
+    }
+}
+
+.vert_line {
+    height: 400px;
+    background-color: $dark-orange;
+    width: 1px;
+}
+
+.footer-line_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-tel {
+    margin-top: 0;
+    margin-right: 25px;
+}
+
+.work {
+    @include jost(17px, $grey-2, 400);
+    margin-bottom: 30px;
+}
