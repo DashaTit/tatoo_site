@@ -24,6 +24,7 @@
   vertical-align: middle;
 }
 .tel .tel_number:hover {
+  cursor: pointer;
   color: #BB8C5F;
 }
 
