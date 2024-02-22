@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@mixin montserrat($size, $color, $weight) { //MONTSERRAT
+  font-family: "montserrat", sans-serif;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin jost($size, $color, $weight) { //JOST
+  font-family: "jost", sans-serif;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin forum($size, $color, $weight) { //FORUM
+  font-family: "forum", sans-serif;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+$bg-color: #050402;
+$text-color: #FAF6F2;
+$grey: #D0D0D0;
+$orange: #BB8C5F;
+$dark-orange: #524336;
+$dark: #3E424B;
+$bg-card: #F5F5F5;
+$grey-2: #636B78;
+$bg-card2: #EEEEEE;
+$white: #FAF6F2;
+
+
+
+
+.nav_up {
+  display: flex;
+  margin-top: 14px;
+}
+
+.contacts {
+  margin-right: 60px;
+}
+.tel { //tel position
+  margin-top: 24px;
+  .tel_number {
+    @include jost(15px, $text-color, 400);
+    transition: all 0.3s ease-in;
+  
+    &:before {
+      content: url('/img/navigation/handset.svg');
+      margin-right: 17px;
+      vertical-align: middle;
+    }
+
+    &:hover {
+        cursor: pointer;
+      color: $orange;
+    }
+  }
+}
+
+
+.viber, .whats_app, .telegram {
+  @include jost(12px, $grey, 400);
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.viber, .whats_app { //mail position
+  margin-right: 7px;
+}
+
+.mail_name {
+    @include jost(15px, $text-color, 400);
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: $orange;
+    }
+}
+
+.mail {
+  margin-top: 25px;
+  margin-right: 140px;
+  transition: all 0.3s ease-in;
+
+  &:before {
+    content: url('/img/navigation/envelop.svg');
+    margin-right: 9px;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.basket {
+
+  margin-top: 28px;
+  margin-left: 262px;
+  display: flex;
+  @include jost(15px, $text-color, 400);
+  vertical-align: middle;
+
+  .basket_icon {
+    position: relative;
+    margin-top: -4px;
+    margin-left: 10px;
+    width: 19px;
+    height: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.logo {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.liked {
+  margin-top: 25px;
+  height: 18px;
+  width: 19px;
+  margin-left: 58px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.personal {
+  margin-top: 12px;
+  height: 18px;
+  width: 19px;
+  margin-left: 28px;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.line {
+  margin-top: 10px;
+  width:100%;
+  height: 1px;
+  background-color: $orange;
+}
+
+//NAV DOWN
+
+.nav_down {
+  display: flex;
+  @include jost(25px, $text-color, 400);
+}
+
+.catalog_text {
+  margin-top: 24px;
+  margin-right: 11px;
+}
+
+.burger {
+  margin-top: 31.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 14px;
+  
+}
+
+
+.burger__line {
+  width: 100%;
+  height: 2px;
+  background-color: $orange;
+}
+
+.search {
+  width: 418px;
+  height: 44px;
+  margin-left: 61px;
+  margin-top: 14px;
+  background-image: url('/img/navigation/Search.svg');
+  background-size: 19px;
+  background-repeat: no-repeat;
+  background-position: 22px 48%;
+  padding: 0 20px 0 55px;
+  border: 1px $dark-orange solid;
+  @include jost(15px, $grey, 400);
+}
+
+.search:active {
+  border: 1px $orange solid;
+  @include jost(15px, $text-color, 400);
+}
+
+.main_navigation {
+  margin-left: 60px;
+  margin-top: 21px;
+  ul {
+    display: flex;
+  }
+}
+
+.nav_el {
+  margin-right: 60px;
+
+  a {
+    @include jost(17px, $text-color, 400);
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
+
+.header_categories, .header_brends {
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $orange;
+    cursor: pointer;
+  }
+}
+
+.popup-burger {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: -100px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+
+  .burger_content {
+    @include jost(17px, $dark, 400);
+  }
+
+  .header_categories.active {
+    color: $orange;
+  }
+
+  .popup_header {
+    display: flex;
+    background-color: $bg-card;
+    padding: 50px;
+    h1 {
+      margin-right: 30px;
+    }
+  }
+
+  
+}
+
+.burger-categories {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.burger-brends {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup-burger.active {
+  visibility: visible;
+  opacity: 1;
+} 
+
+.burger-categories.active {
+  background-color: $bg-card;
+  padding: 0px 50px;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+
+  ul {
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  ul:first-child {
+    margin-right: 30px;
+  }
+}
+
+.burger-brends.active {
+  width: 1120px;
+  margin-top: -205px;
+  background-color: $bg-card;
+  padding: 0px 50px;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+
+  ul {
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  ul {
+    margin-right: 30px;
+  }
+}
+
+.header_brends.active {
+  color: $orange;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
