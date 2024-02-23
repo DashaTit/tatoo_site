@@ -1,0 +1,134 @@
+.products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    position: relative;
+}
+
+.card {
+    margin-top: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.tab.active {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    display: none;
+  }
+  .product-card {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  
+    width: 289px;
+    position: relative;
+  
+    &:hover {
+      .put_bg {
+          visibility:visible;
+          opacity: 1;
+      }
+    }
+  
+  } 
+  
+  .card-img {
+      width: 289px;
+      background-color: $bg-card2;
+
+      &:hover {
+        .put_bg {
+                visibility:visible;
+              opacity: 1;
+        }
+        }
+      }
+  
+  
+  .header_card {
+  
+    display: flex;
+    left: 40px;
+    top: 34px;
+    margin-bottom: -1px;
+    background-color: #F5F5F5;
+    @include jost(15px, $orange, 400);
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+  .like_status {
+    background-image: url('../../img/tabs/like-default.svg');
+    width: 23px;
+    height: 19px;
+    background-repeat: no-repeat;
+    margin-left: 180px;
+  }
+  
+  .like_status.active {
+    background-image: url('../../img/tabs/like-active.jpg');
+  }
+  
+  .under_card {
+    width: 259px;
+    margin-top: -5px;
+    background-color: #fff;
+    padding-top: 22px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .product_name {
+    @include jost(17px, $dark, 400);
+  }
+  
+  .price {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+  
+    .now_price {
+      @include jost(24px, $orange, 700)
+    }
+  
+    .discount {
+      margin-left: 10px;
+      
+      @include jost(17px, $grey-2, 300);
+      text-decoration: line-through;
+    }
+  }
+  
+  .put_bg {
+      width: 289px;
+      background-color: #fff;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+  
+      .put {
+          cursor: pointer;
+          margin-bottom: 30px;
+        margin-top: 20px;
+        margin-left: 15px;
+        padding: 8px 42px;
+        background-color: $bg-card2;
+        border: 1px solid $orange;
+        @include jost(20px, $orange, 400);
+      
+        &:hover {
+          background-color: $bg-card;
+        }
+      }
+}
+

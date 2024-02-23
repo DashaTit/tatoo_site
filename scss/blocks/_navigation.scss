@@ -10,7 +10,7 @@
 }
 .tel { //tel position
   margin-top: 24px;
-  .tel_number {
+  .tel_numer {
     @include jost(15px, $text-color, 400);
     transition: all 0.3s ease-in;
   
@@ -209,7 +209,6 @@
 }
 
 .popup-burger {
-  display: block;
   position: absolute;
   z-index: 0;
   top: -100px;
@@ -293,3 +292,4 @@
 .header_brends.active {
   color: $orange;
 }
+

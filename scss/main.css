@@ -11,19 +11,19 @@
 .tel {
   margin-top: 24px;
 }
-.tel .tel_number {
+.tel .tel_numer {
   font-family: "jost", sans-serif;
   color: #FAF6F2;
   font-size: 15px;
   font-weight: 400;
   transition: all 0.3s ease-in;
 }
-.tel .tel_number:before {
+.tel .tel_numer:before {
   content: url("/img/navigation/handset.svg");
   margin-right: 17px;
   vertical-align: middle;
 }
-.tel .tel_number:hover {
+.tel .tel_numer:hover {
   cursor: pointer;
   color: #BB8C5F;
 }
@@ -210,7 +210,6 @@
 }
 
 .popup-burger {
-  display: block;
   position: absolute;
   z-index: 0;
   top: -100px;
