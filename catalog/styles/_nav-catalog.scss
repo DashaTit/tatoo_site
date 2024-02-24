@@ -351,3 +351,19 @@ $white: #FAF6F2;
     opacity: 0;
 }
 
+.bascket_style {
+    position: relative;
+}
+
+.bascket_num {
+    top: -18px;
+    right: -18px;
+    position: absolute;
+    background-color: $orange;
+    width: 24px;
+    height: 21px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include jost(17px, $text-color, 400);
+}

@@ -85,7 +85,6 @@
     padding-top: 22px;
     padding-left: 30px;
     padding-bottom: 30px;
-    margin-bottom: 20px;
   }
   
   .product_name {
@@ -110,10 +109,9 @@
   }
   
   .put_bg {
+    margin-bottom: 20px;
       width: 289px;
       background-color: #fff;
-      visibility: hidden;
-      opacity: 0;
       transition: all 0.5s ease-in-out;
   
       .put {

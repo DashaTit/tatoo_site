@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>catalog</title>
     <link rel="stylesheet" href="./styles/main.css">
-      
 </head>
 <body>
     <div class="container">
@@ -27,10 +26,13 @@
             <div class="logo">
               <a href="../html/index.html"><img src="../img/navigation/logo.svg" alt="" class="logo_img"></a>
             </div>
-            <div class="basket">
+            <a href="buscket.html"><div class="basket">
               <h2 class="basket_sum">0 ₽</h2>
-              <img src="../img/navigation/basket.svg" alt="" class="basket_icon">
-            </div>
+              <div class="bascket_style">
+                <img src="../img/navigation/basket.svg" alt="" class="basket_icon">
+                <div class="bascket_num">0</div>
+              </div>
+            </div></a>
             <img src="../img/navigation/like.svg" alt="" class="liked">
     
             <button class="personal"><img src="../img/navigation/personal.svg" alt="" class="personal"></button>
@@ -123,8 +125,8 @@
             </div>
         </footer>
     </div>
-
-
-    <script src="../catalog/script/script.js"></script> 
+    
+    <script type="module" src="/catalog/script/utils.js"></script>
+    <script type="module" src="../catalog/script/script.js"></script>
 </body>
 </html>
