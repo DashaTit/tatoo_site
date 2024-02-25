@@ -16,6 +16,7 @@ const bgCode = document.querySelector('.pin_code_body')
 document.body.style.overflowY = 'scroll';
 personal.addEventListener('click', {
   handleEvent(event) {
+    console.log('click')
 
     popup.classList.add('open');
     document.body.style.overflowY = 'hidden';

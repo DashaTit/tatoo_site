@@ -46,6 +46,7 @@
 .second_line {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
@@ -92,6 +93,17 @@
   }
 }
 
+.see_all {
+
+    p:hover {
+        cursor: pointer;
+    color: $orange;
+    }
+    
+}
+.see_all p {
+    transition: all 0.3s ease-in-out;
+}
 
 // DOWN SLIDE
 
@@ -152,4 +164,135 @@
     right: 40%;
     @include jost(20px, $orange, 400);
   }
+}
+
+@media (max-width: 1216px) {
+    
+    .catalog_card {
+    position: relative;
+    width: 279px;
+    height: 330px;
+    background-color: $bg-card;
+    margin-top: 50px;
+    } 
+
+    .catalog_img {
+        padding-top: 75px;
+        padding-left: 0;
+    width: 279px;
+    height: 254px;
+    }
+
+    .card-width {
+        width: 429px;
+      } 
+    
+      .catalog_img-2 {
+        width: 429px;
+        padding-top: 79px;
+        padding-right: 83px;
+        padding-left: 0px;
+      }
+    
+      .catalog_card-2 {
+        width: 296px;
+        height: 314px;
+        position: relative;
+        background-color: $bg-card;
+      
+        .catalog_img-3 {
+          width: 236px;
+          height: 219px;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 90px;
+        }
+      }
+
+      .catalog_card-3 {
+        width: 354px;
+        height: 313px;
+        position: relative;
+        background-color: $bg-card;
+      
+        .catalog_img-4 {
+            padding-top: 90px;
+          width: 227px;
+          height: 223px;
+          padding-left: 126px;
+        }
+      }
+
+      .catalog_card-4 {
+        margin-top: 20px;
+        width: 728px;
+        height: 324px;
+        position: relative;
+        background-color: $bg-card;
+      
+        .catalog_img-5 {
+          width: 529px;
+          height: 241px;
+          padding-left: 84px;
+          padding-right: 15px;
+          padding-top: 82px;
+        }
+      }
+
+      .color_slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      
+        img {
+          width: 100%;
+        }
+      
+        .catalog_text-other_color {
+          position: absolute;
+          @include jost(30px, $white, 700);
+          top: 10%;
+          left: 10%;
+          right: 20%;
+        }
+      
+        .see_catalog {
+          position: absolute;
+          top: 75%;
+          left: 20%;
+          right: 30%;
+          @include jost(20px, $orange, 400);
+        }
+      }
+    
+      .foxx_slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-left: 20px;
+      
+        img {
+          width: 100%;
+        }
+      
+        .catalog_text-other_color {
+            position: absolute;
+            @include jost(30px, $white, 700);
+            top: 10%;
+            left: 10%;
+            right: 20%;
+        }
+      
+        .see_catalog {
+            position: absolute;
+            top: 75%;
+            left: 20%;
+            right: 30%;
+            @include jost(20px, $orange, 400);
+        }
+      }
+
+      .i-4 {
+        display: none;
+      }
 }

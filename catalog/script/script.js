@@ -40,6 +40,9 @@ function renderStartPage(data) {
     console.log(arrCards)
 
     createCards(arrCards)
+
+    const basket = getBasketLocalStorage();
+    chekingActiveBtn(basket);
 };
 
 
@@ -50,7 +53,7 @@ function createCards(data) {
         console.log(card)
 		const cardItem = 
 			`
-            <div class="card" className="card" data-id="${id}">
+            <div class="card" data-id="${id}">
             <div class="header_card">
                 <div class="card_status">${status}</div>
                 <div class="like_status"></div>
@@ -65,7 +68,7 @@ function createCards(data) {
                 <div class="discount">${sale}</div>
                 </div>
             </div>
-            <div class="put_bg"><button class="put">Добавить в корзину</button></div>
+            <div class="put_bg" ><button class="put" data-id="${id}">Добавить в корзину</button></div>
             </div>
             `
         products.insertAdjacentHTML('beforeEnd', cardItem);
@@ -91,6 +94,7 @@ function sliceArrCards() {
 }
 
 showBtn.addEventListener('click', sliceArrCards);
+
 products.addEventListener('click', handleCardClick);
 
 
@@ -98,12 +102,11 @@ products.addEventListener('click', handleCardClick);
 
 function handleCardClick(event) {
     const targetBtn = event.target.closest('.put');
-    // console.log(targetBtn)
-    
-    // if (!targetBtn) return;
+    if (!targetBtn) return;
+    console.log(event.target)
 
-    const card = document.querySelector('.card');
-    const id = card.dataset.id;
+    const id = event.target.dataset.id;
+    // const id = card.dataset.id;
     const basket = getBasketLocalStorage()
 
     basket.push(id);
@@ -114,16 +117,13 @@ function handleCardClick(event) {
 
 
 function chekingActiveBtn(basket) {
-    const btn = document.querySelector('.card');
-    console.log(btn.forEach())
+    const btn = document.querySelectorAll('.put');
 
-    btn.forEach(button());
+    btn.forEach((button) => {
+        const card = button.closest('.card');
+        const id = card.dataset.id;
+        const isInBasket = basket.includes(id);
 
-    function button() {
-            const card = button.closest('.card');
-            const id = card.dataset.id;
-            const isInBasket = basket.includes(id);
-    
-            button.textContent = isInBasket ? 'В корзине' : 'Добавить в корзину';
-    }
+        button.textContent = isInBasket ? 'В корзине' : 'Добавить в корзину';
+    });
 }

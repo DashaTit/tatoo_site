@@ -66,6 +66,28 @@
     </nav>
   </div>
 
+  <div class="container">
+    <div class="second_nav">
+        <div class="burger burger-2">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </div>
+
+          <form role="search" method="get" action="/search">
+            <input class="search" type="search" name="search-text" placeholder="Поиск" />
+          </form>
+
+          <div class="basket">
+            <h2 class="basket_sum">0 ₽</h2>
+            <img src="../img/navigation/basket.svg" alt="" class="basket_icon">
+          </div>
+          <img src="../img/navigation/like.svg" alt="" class="liked">
+  
+          <button class="personal"><img src="../img/navigation/personal.svg" alt="" class="personal"></button>
+        </div>
+</div>
+
     
     <div class="container">
       <img src="../img/bg.png" alt="" class="bg-img">
@@ -293,7 +315,7 @@
             <div class="put_bg"><button class="put">Добавить в корзину</button></div>
           </div>
 
-          <div class="product-card">
+          <div class="product-card card-4">
             <img src="../img/tabs/forever_cartridge.png" alt="" class="card-img">
             <div class="header_card">
               <div class="card_status">хит</div>
@@ -367,7 +389,7 @@
             <div class="put_bg"><button class="put">Добавить в корзину</button></div>
           </div>
 
-          <div class="product-card">
+          <div class="product-card card-4">
             <img src="../img/tabs/forever_cartridge.png" alt="" class="card-img">
             <div class="header_card">
               <div class="card_status">популярно</div>
@@ -442,7 +464,7 @@
             <div class="put_bg"><button class="put">Добавить в корзину</button></div>
           </div>
 
-          <div class="product-card">
+          <div class="product-card card-4">
             <img src="../img/tabs/forever_cartridge.png" alt="" class="card-img">
             <div class="header_card">
               <div class="card_status">Новинка</div>
@@ -515,7 +537,7 @@
             <div class="put_bg"><button class="put">Добавить в корзину</button></div>
           </div>
 
-          <div class="product-card">
+          <div class="product-card card-4">
             <img src="../img/tabs/forever_cartridge.png" alt="" class="card-img">
             <div class="header_card">
               <div class="card_status">акция</div>
@@ -550,8 +572,7 @@
           <div class="first_line">
             <div class="catalog_card">
               <img src="../img/catalog/nabors.png" alt="" class="catalog_img">
-              <h3 class="catalog_text">Тату <br>
-                наборы</h3>
+              <h3 class="catalog_text">Тату наборы</h3>
             </div>
 
             <div class="catalog_card card-width">
@@ -585,14 +606,14 @@
     <div class="color_slide">
       <img src="../img/catalog/lip_nitn.png" alt="">
       <h3 class="catalog_text-other_color">Краски Lip Nitn</h3>
-      <p class="see_catalog">Смотреть в каталоге</p>
+      <a href="../catalog/catalog.html"><p class="see_catalog">Смотреть в каталоге</p></a>
     </div>
 
 
     <div class="foxx_slide">
       <img src="../img/catalog/foxx_vipper.png" alt="">
       <h3 class="catalog_text-other_color">Foxx viper — <br> хит 2024 года</h3>
-      <p class="see_catalog">Смотреть в каталоге</p>
+      <a href="../catalog/catalog.html"><p class="see_catalog">Смотреть в каталоге</p></a>
     </div>
   </div>
 
@@ -601,7 +622,7 @@
       <div class="new-bg">
         <div class="container slider-brend">
           <h1 class="slider_header">Популярные бренды</h1>
-          <div class="see_all"><p>Смотреть все</p></div>
+          <div class="see_all"><a href="../catalog/catalog.html"><p>Смотреть все</p></a></div>
           <div class="slider-block">
             <div class="left-btn"><img src="../img/icons/right-btn.svg" alt=""></div>
             <div class="brends-icons">
@@ -609,15 +630,15 @@
                 <img src="../img/icons/aloe_tatoo.png" alt="" class="brend-icons">
                 <img src="../img/icons/cheyenne.png" alt="" class="brend-icons">
                 <img src="../img/icons/dermalize.png" alt="" class="brend-icons">
-                <img src="../img/icons/face_body.png" alt="" class="brend-icons">
-                <img src="../img/icons/hanafi.png" alt="" class="brend-icons">
+                <img src="../img/icons/face_body.png" alt="" class="brend-icons i-4">
+                <img src="../img/icons/hanafi.png" alt="" class="brend-icons i-4">
               </div>
               <div class="s-line">
                 <img src="../img/icons/aloe_tatoo.png" alt="" class="brend-icons">
                 <img src="../img/icons/cheyenne.png" alt="" class="brend-icons">
                 <img src="../img/icons/dermalize.png" alt="" class="brend-icons">
-                <img src="../img/icons/face_body.png" alt="" class="brend-icons">
-                <img src="../img/icons/hanafi.png" alt="" class="brend-icons">
+                <img src="../img/icons/face_body.png" alt="" class="brend-icons i-4">
+                <img src="../img/icons/hanafi.png" alt="" class="brend-icons i-4">
               </div>
             </div>
             <div class="rotate-btn"><img src="../img/icons/right-btn.svg" alt=""></div>
@@ -701,6 +722,7 @@
                 </div>
             </footer>
         </div>
+  <script src="https://unpkg.com/imask"></script>      
   <script src="../js/script.js"></script>
 </body>
 </html>

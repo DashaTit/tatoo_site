@@ -33,6 +33,15 @@
     .f-line {
         padding-bottom: 5px;
     }
+}
 
 
+@media (max-width: 1216px) {
+    .rotate-btn {
+        display: none;
+    }
+
+    .left-btn {
+        display: none;
+    }
 }

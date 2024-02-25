@@ -36,3 +36,14 @@
         @include jost(20px, $orange, 400);
     }
 }
+
+@media (max-width: 1216px) {
+    .about_us_flex {
+        display: block;
+    }
+
+    .about_us_text {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}

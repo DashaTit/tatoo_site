@@ -2,12 +2,13 @@
 
 .nav_up {
   display: flex;
+  justify-content: space-between;
   margin-top: 14px;
 }
 
-.contacts {
-  margin-right: 60px;
-}
+// .contacts {
+//   margin-right: 60px;
+// }
 .tel { //tel position
   margin-top: 24px;
   .tel_numer {
@@ -52,7 +53,7 @@
 
 .mail {
   margin-top: 25px;
-  margin-right: 140px;
+//   margin-right: 140px;
   transition: all 0.3s ease-in;
 
   &:before {
@@ -69,7 +70,7 @@
 .basket {
 
   margin-top: 28px;
-  margin-left: 262px;
+//   margin-left: 262px;
   display: flex;
   @include jost(15px, $text-color, 400);
   vertical-align: middle;
@@ -97,7 +98,7 @@
   margin-top: 25px;
   height: 18px;
   width: 19px;
-  margin-left: 58px;
+//   margin-left: 58px;
 
   &:hover {
     cursor: pointer;
@@ -107,8 +108,8 @@
 .personal {
   margin-top: 12px;
   height: 18px;
-  width: 19px;
-  margin-left: 28px;
+//   width: 19px;
+//   margin-left: 28px;
   border: none;
   background-color: transparent;
 
@@ -129,6 +130,7 @@
 
 .nav_down {
   display: flex;
+  justify-content: space-between;
   @include jost(25px, $text-color, 400);
 }
 
@@ -151,13 +153,14 @@
 .burger__line {
   width: 100%;
   height: 2px;
+  width: 24px;
   background-color: $orange;
 }
 
 .search {
   width: 418px;
   height: 44px;
-  margin-left: 61px;
+//   margin-left: 61px;
   margin-top: 14px;
   background-image: url('/img/navigation/Search.svg');
   background-size: 19px;
@@ -174,7 +177,7 @@
 }
 
 .main_navigation {
-  margin-left: 60px;
+//   margin-left: 60px;
   margin-top: 21px;
   ul {
     display: flex;
@@ -291,5 +294,41 @@
 
 .header_brends.active {
   color: $orange;
+}
+
+.second_nav {
+    display: none;
+}
+
+@media (max-width: 1216px) {
+    .nav {
+        display: none;
+    }
+
+    .second_nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 14px;
+    }
+
+    .burger-brends.active {
+        width: 720px;
+        margin-top: -205px;
+        background-color: $bg-card;
+        padding: 0px 50px;
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+      
+        ul {
+          li {
+            margin-bottom: 15px;
+          }
+        }
+      
+        ul {
+          margin-right: 30px;
+        }
+      }
 }
 

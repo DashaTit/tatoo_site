@@ -73,3 +73,27 @@ footer {
     @include jost(17px, $grey-2, 400);
     margin-bottom: 30px;
 }
+
+@media (max-width: 1216px) {
+    footer {
+        .footer-blocks {
+            height: 400px;
+            display: block;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .vert_line {
+            height: 1px;
+            width: 100%;
+            margin-bottom: 70px;
+            margin-top: 70px;
+        }
+
+        .info {
+            margin-top: 70px;
+
+            
+        }
+    }
+}
