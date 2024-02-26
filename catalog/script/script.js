@@ -2,7 +2,9 @@
 
 import { basketIncludes,
     setBasketLocalStorage,
-    getBasketLocalStorage
+    getBasketLocalStorage,
+    getPrice,
+    checkingRelevanceValueBasket
  } from "../script/utils.js";
 
 let productsData = []
@@ -11,6 +13,7 @@ const products = document.querySelector('.products');
 let shownCards = 4;
 let countCreateCards = 1;
 const cardCount = 4;
+const basketSum = document.querySelector('.basket_sum')
 
 
 
@@ -123,7 +126,14 @@ function chekingActiveBtn(basket) {
         const card = button.closest('.card');
         const id = card.dataset.id;
         const isInBasket = basket.includes(id);
-
         button.textContent = isInBasket ? 'В корзине' : 'Добавить в корзину';
     });
+    const price = document.querySelector('.now_price').textContent
+    SumReturn(price);
+    //checkingRelevanceValueBasket(basket)
+}
+
+function SumReturn(price) {
+    basketSum.innerHTML = String(Number(basketSum.innerHTML) + Number(price))
+    //console.log(basketSum.innerHTML)
 }
