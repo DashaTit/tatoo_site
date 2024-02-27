@@ -28,6 +28,16 @@
   }
 }
 
+.tel_number {
+    @include jost(15px, $text-color, 400);
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        cursor: pointer;
+      color: $orange;
+    }
+}
+
 
 .viber, .whats_app, .telegram {
   @include jost(12px, $grey, 400);
@@ -212,6 +222,7 @@
 }
 
 .popup-burger {
+    width: 768px;
   position: absolute;
   z-index: 0;
   top: -100px;
@@ -240,28 +251,46 @@
 }
 
 .burger-categories {
+    width: 768px;
   visibility: hidden;
   opacity: 0;
 }
 
 .burger-brends {
+    width: 768px;
   visibility: hidden;
   opacity: 0;
 }
-
+.bascket_style {
+    position: relative;
+}
+.bascket_num {
+    top: -18px;
+    right: -18px;
+    position: absolute;
+    background-color: $orange;
+    width: 24px;
+    height: 21px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include jost(17px, $text-color, 400);
+}
 .popup-burger.active {
+    width: 768px;
   visibility: visible;
   opacity: 1;
 } 
 
 .burger-categories.active {
+    width: 768px;
   background-color: $bg-card;
-  padding: 0px 50px;
   visibility: visible;
   opacity: 1;
   display: flex;
 
   ul {
+    padding-left: 50px;
     li {
       margin-bottom: 15px;
     }
@@ -273,15 +302,15 @@
 }
 
 .burger-brends.active {
-  width: 1120px;
+  width: 768px;
   margin-top: -205px;
   background-color: $bg-card;
-  padding: 0px 50px;
   visibility: visible;
   opacity: 1;
   display: flex;
 
   ul {
+    padding-left: 50px;
     li {
       margin-bottom: 15px;
     }
@@ -300,7 +329,26 @@
     display: none;
 }
 
+.nav-3 {
+    display: none;
+}
+
 @media (max-width: 1216px) {
+    .bascket_style {
+        position: relative;
+    }
+    .bascket_num {
+        top: -18px;
+        right: -18px;
+        position: absolute;
+        background-color: $orange;
+        width: 24px;
+        height: 21px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include jost(17px, $text-color, 400);
+    }
     .nav {
         display: none;
     }
@@ -311,11 +359,87 @@
         margin-top: 14px;
     }
 
-    .burger-brends.active {
-        width: 720px;
+    .header_categories, .header_brends {
+        transition: all 0.3s ease-in;
+      
+        &:hover {
+          color: $orange;
+          cursor: pointer;
+        }
+      }
+      
+      .popup-burger {
+          width: 670px;
+        position: absolute;
+        z-index: 0;
+        top: -100px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease 0s;
+      
+        .burger_content {
+            width: 670px;
+          @include jost(17px, $dark, 400);
+        }
+      
+        .header_categories.active {
+          color: $orange;
+        }
+      
+        .popup_header {
+            width: 570px;
+          display: flex;
+          background-color: $bg-card;
+          
+          h1 {
+            margin-right: 30px;
+          }
+        }
+      
+        
+      }
+      
+      .burger-categories {
+        width: 670px;
+        visibility: hidden;
+        opacity: 0;
+      }
+      
+      .burger-brends {
+        width: 670px;
+        visibility: hidden;
+        opacity: 0;
+      }
+      
+      .popup-burger.active {
+        width: 670px;
+        visibility: visible;
+        opacity: 1;
+      } 
+      
+      .burger-categories.active {
+        width: 670px;
+        background-color: $bg-card;
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+      
+        ul {
+          li {
+            margin-bottom: 15px;
+          }
+        }
+      
+        ul:first-child {
+          margin-right: 30px;
+        }
+      }
+      
+      .burger-brends.active {
+        width: 760px;
         margin-top: -205px;
         background-color: $bg-card;
-        padding: 0px 50px;
+
         visibility: visible;
         opacity: 1;
         display: flex;
@@ -330,5 +454,21 @@
           margin-right: 30px;
         }
       }
+      
+      .header_brends.active {
+        width: 670px;
+        color: $orange;
+      }
 }
 
+@media (max-width: 767px) {
+    .second_nav {
+        display: none;
+    }
+
+    .nav-3 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 14px;
+    }
+}

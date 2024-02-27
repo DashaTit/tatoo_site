@@ -1,3 +1,12 @@
+"use strict"
+
+import { basketIncludes,
+    setBasketLocalStorage,
+    getBasketLocalStorage,
+    getPrice,
+    checkingRelevanceValueBasket
+ } from "../catalog/script/utils";
+
 const personal = document.getElementsByClassName('personal')[0];
 const popup = document.getElementsByClassName('popup')[0];
 const btn_x = document.getElementsByClassName('btn_x')[0];
@@ -12,6 +21,8 @@ const telChange = document.querySelector('.tel_mask')
 const returnLink = document.querySelector('.no_code')
 const time = document.querySelector('.time')
 const bgCode = document.querySelector('.pin_code_body')
+const burger2 = document.querySelector('.burger-2')
+const personal2 = document.querySelector('.p-2')
 //poppup
 document.body.style.overflowY = 'scroll';
 personal.addEventListener('click', {
@@ -22,6 +33,17 @@ personal.addEventListener('click', {
     document.body.style.overflowY = 'hidden';
   }
 });
+
+personal2.addEventListener('click', {
+    handleEvent(event) {
+      console.log('click')
+  
+      popup.classList.add('open');
+      document.body.style.overflowY = 'hidden';
+    }
+  });
+
+
 
 btn_x.addEventListener('click', {
   handleEvent(event) {
@@ -138,6 +160,14 @@ burgerMenu.addEventListener("click", function () {
     headerBrends.classList.remove("active");
 })
 
+burger2.addEventListener("click", function () {
+    burgerPopup.classList.toggle("active");
+    categories.classList.add("active");
+    brends.classList.remove("active");
+    headerCategories.classList.add("active");
+    headerBrends.classList.remove("active");
+})
+
 headerCategories.addEventListener("click", function () {
     categories.classList.add("active");
     brends.classList.remove("active");
@@ -151,3 +181,12 @@ headerBrends.addEventListener("click", function () {
     headerCategories.classList.remove("active");
     headerBrends.classList.add("active");
 })
+
+body.addEventListener('click', function(event) {
+    console.log('click')
+    //if you click on anything except the modal itself or the "open modal" link, close the modal
+    if (!event.target.closest(".popup-burger") && !event.target.closest('.burger')) {
+        console.log('ty debil')
+        burgerPopup.classList.remove('active')
+    }
+  });

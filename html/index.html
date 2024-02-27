@@ -26,10 +26,13 @@
         <div class="logo">
           <img src="../img/navigation/logo.svg" alt="" class="logo_img">
         </div>
-        <div class="basket">
-          <h2 class="basket_sum">0</h2>
-          <img src="../img/navigation/basket.svg" alt="" class="basket_icon">
-        </div>
+        <a href="../catalog/buscket.html"><div class="basket">
+            <h2 class="basket_sum">0</h2>
+            <div class="bascket_style">
+              <img src="../img/navigation/basket.svg" alt="" class="basket_icon">
+              <div class="bascket_num">0</div>
+            </div>
+          </div></a>
         <img src="../img/navigation/like.svg" alt="" class="liked">
 
         <button class="personal"><img src="../img/navigation/personal.svg" alt="" class="personal"></button>
@@ -78,13 +81,34 @@
             <input class="search" type="search" name="search-text" placeholder="Поиск" />
           </form>
 
-          <div class="basket">
-            <h2 class="basket_sum">0 ₽</h2>
-            <img src="../img/navigation/basket.svg" alt="" class="basket_icon">
-          </div>
+          <a href="../catalog/buscket.html"><div class="basket">
+            <h2 class="basket_sum">0</h2>
+            <div class="bascket_style">
+              <img src="../img/navigation/basket.svg" alt="" class="basket_icon">
+              <div class="bascket_num">0</div>
+            </div>
+          </div></a>
           <img src="../img/navigation/like.svg" alt="" class="liked">
   
-          <button class="personal"><img src="../img/navigation/personal.svg" alt="" class="personal"></button>
+          <button class="personal"><img src="../img/navigation/personal.svg" alt="" class="personal p-2"></button>
+        </div>
+</div>
+
+<div class="container">
+    <div class="nav-3">
+        <div class="burger burger-2">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </div>
+
+          <a href="../catalog/buscket.html"><div class="basket">
+            <h2 class="basket_sum">0</h2>
+            <div class="bascket_style">
+              <img src="../img/navigation/basket.svg" alt="" class="basket_icon">
+              <div class="bascket_num">0</div>
+            </div>
+          </div></a>
         </div>
 </div>
 
@@ -722,7 +746,8 @@
                 </div>
             </footer>
         </div>
-  <script src="https://unpkg.com/imask"></script>      
-  <script src="../js/script.js"></script>
+  <script  src="https://unpkg.com/imask"></script>    
+  <script type="module" src="../catalog/script/utils.js"></script>  
+  <script type="module" src="../js/script.js"></script>
 </body>
 </html>

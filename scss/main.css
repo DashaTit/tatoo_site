@@ -25,6 +25,18 @@
   color: #BB8C5F;
 }
 
+.tel_number {
+  font-family: "jost", sans-serif;
+  color: #FAF6F2;
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.3s ease-in;
+}
+.tel_number:hover {
+  cursor: pointer;
+  color: #BB8C5F;
+}
+
 .viber, .whats_app, .telegram {
   font-family: "jost", sans-serif;
   color: #D0D0D0;
@@ -202,6 +214,7 @@
 }
 
 .popup-burger {
+  width: 768px;
   position: absolute;
   z-index: 0;
   top: -100px;
@@ -228,26 +241,52 @@
 }
 
 .burger-categories {
+  width: 768px;
   visibility: hidden;
   opacity: 0;
 }
 
 .burger-brends {
+  width: 768px;
   visibility: hidden;
   opacity: 0;
 }
 
+.bascket_style {
+  position: relative;
+}
+
+.bascket_num {
+  top: -18px;
+  right: -18px;
+  position: absolute;
+  background-color: #BB8C5F;
+  width: 24px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "jost", sans-serif;
+  color: #FAF6F2;
+  font-size: 17px;
+  font-weight: 400;
+}
+
 .popup-burger.active {
+  width: 768px;
   visibility: visible;
   opacity: 1;
 }
 
 .burger-categories.active {
+  width: 768px;
   background-color: #F5F5F5;
-  padding: 0px 50px;
   visibility: visible;
   opacity: 1;
   display: flex;
+}
+.burger-categories.active ul {
+  padding-left: 50px;
 }
 .burger-categories.active ul li {
   margin-bottom: 15px;
@@ -257,13 +296,15 @@
 }
 
 .burger-brends.active {
-  width: 1120px;
+  width: 768px;
   margin-top: -205px;
   background-color: #F5F5F5;
-  padding: 0px 50px;
   visibility: visible;
   opacity: 1;
   display: flex;
+}
+.burger-brends.active ul {
+  padding-left: 50px;
 }
 .burger-brends.active ul li {
   margin-bottom: 15px;
@@ -280,7 +321,31 @@
   display: none;
 }
 
+.nav-3 {
+  display: none;
+}
+
 @media (max-width: 1216px) {
+  .bascket_style {
+    position: relative;
+  }
+
+  .bascket_num {
+    top: -18px;
+    right: -18px;
+    position: absolute;
+    background-color: #BB8C5F;
+    width: 24px;
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "jost", sans-serif;
+    color: #FAF6F2;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
   .nav {
     display: none;
   }
@@ -291,11 +356,78 @@
     margin-top: 14px;
   }
 
+  .header_categories, .header_brends {
+    transition: all 0.3s ease-in;
+  }
+  .header_categories:hover, .header_brends:hover {
+    color: #BB8C5F;
+    cursor: pointer;
+  }
+
+  .popup-burger {
+    width: 670px;
+    position: absolute;
+    z-index: 0;
+    top: -100px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+  }
+  .popup-burger .burger_content {
+    width: 670px;
+    font-family: "jost", sans-serif;
+    color: #3E424B;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  .popup-burger .header_categories.active {
+    color: #BB8C5F;
+  }
+  .popup-burger .popup_header {
+    width: 570px;
+    display: flex;
+    background-color: #F5F5F5;
+  }
+  .popup-burger .popup_header h1 {
+    margin-right: 30px;
+  }
+
+  .burger-categories {
+    width: 670px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .burger-brends {
+    width: 670px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .popup-burger.active {
+    width: 670px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .burger-categories.active {
+    width: 670px;
+    background-color: #F5F5F5;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+  }
+  .burger-categories.active ul li {
+    margin-bottom: 15px;
+  }
+  .burger-categories.active ul:first-child {
+    margin-right: 30px;
+  }
+
   .burger-brends.active {
-    width: 720px;
+    width: 760px;
     margin-top: -205px;
     background-color: #F5F5F5;
-    padding: 0px 50px;
     visibility: visible;
     opacity: 1;
     display: flex;
@@ -305,6 +437,22 @@
   }
   .burger-brends.active ul {
     margin-right: 30px;
+  }
+
+  .header_brends.active {
+    width: 670px;
+    color: #BB8C5F;
+  }
+}
+@media (max-width: 767px) {
+  .second_nav {
+    display: none;
+  }
+
+  .nav-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
   }
 }
 .bg-img {
@@ -648,6 +796,60 @@
     display: flex;
     justify-content: space-between;
     margin-top: -475px;
+  }
+
+  .popup {
+    min-width: 768px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: .75;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    transform: translate(0px, -100%);
+  }
+  .popup .popup_content {
+    background-color: #eeeeee;
+    max-width: 430px;
+    height: 100%;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal_pin_code {
+    min-width: 768px;
+    transform: translate(0px, 0px);
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: all 0.5s ease 0s;
+    transform: translate(0px, -150%);
+  }
+  .modal_pin_code .pin_cod, .modal_pin_code .pin_cod_text, .modal_pin_code .no_code, .modal_pin_code .tel_mask, .modal_pin_code .time, .modal_pin_code .min, .modal_pin_code .sec {
+    background-color: #EEEEEE;
+  }
+}
+@media (max-width: 767px) {
+  .bg-img {
+    width: 322px;
+    width: 100%;
+    height: 321px;
+  }
+
+  .header {
+    display: block;
   }
 }
 .info {
@@ -1387,6 +1589,15 @@ body {
 @media (max-width: 1216px) {
   .container {
     max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;

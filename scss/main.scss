@@ -34,6 +34,16 @@ body {
     }
 }
 
+@media (max-width: 767px) {
+    .container {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 // STYLES RESET
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
