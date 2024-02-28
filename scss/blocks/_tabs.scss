@@ -138,6 +138,18 @@
   margin-right: auto;
 }
 
+.tabs-mobile {
+    margin-top: 80px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.product-card-mobile {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (max-width: 1273px) {
     .product-card {
         &:not(:last-child) {

@@ -361,15 +361,34 @@
         }
       }
 }
+.header_text_block-mobile {
+    width: 280px;
+  background-color: transparent;
+}
 
-@media (max-width: 767px) {
-    .bg-img {
-        width: 322px;
-        width: 100%;
-        height: 321px;
-      }
-    
-      .header {
-        display: block;
-      }
+.header_main_text-mobile {
+    @include forum(35px, $orange, 400);
+}
+
+.header_undertext-mobile {
+    margin-top: 20px;
+  @include jost(20px, $text-color, 400);
+  margin-bottom: 40px;
+}
+
+.header_btn-mobile {
+    width: 280px;
+    background-color: $dark-orange;
+  border: 2px $orange solid;
+  padding: 18px 22px;
+  @include jost(20px, $text-color, 400);
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $orange;
+  }
+}
+
+.bg-img-mobile {
+    width: 320px;
 }
