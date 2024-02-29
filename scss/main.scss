@@ -16,6 +16,10 @@ body {
     background-color: #E3E3E3;
 }
 
+.mobile {
+    display: none;
+}
+
 .container {
   max-width: 1216px;
   margin-left: auto;
@@ -42,7 +46,16 @@ body {
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    .mobile {
+        display: block;
+    }
+
+    .comp-tab {
+        display: none;
+    }
 }
+
 
 // STYLES RESET
 html, body, div, span, applet, object, iframe,
