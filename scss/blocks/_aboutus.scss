@@ -17,6 +17,20 @@
     }
 }
 
+.img_about_us-mobile {
+    padding-top: 80px;
+    margin-bottom: 60px;
+    img {
+        max-width: 280px;
+    }
+}
+
+.about_us_text {
+    button {
+        margin-bottom: 60px;
+    }
+}
+
 .about_us_header {
     @include forum(50px, $orange, 400)
 }

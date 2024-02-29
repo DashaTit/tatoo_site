@@ -74,6 +74,27 @@ footer {
     margin-bottom: 30px;
 }
 
+.footer-blocks-mobile {
+    text-align: center;
+    display: block;
+    height: 400px;
+
+    .info {
+        display: block;
+
+        .ul-li {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            ul {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
 @media (max-width: 1216px) {
     footer {
         .footer-blocks {

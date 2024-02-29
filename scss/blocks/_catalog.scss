@@ -166,6 +166,62 @@
   }
 }
 
+.catalog_text-mobile {
+    padding-top: 130px;
+    margin-bottom: 30px;
+    @include forum(25px, $dark, 400);
+}
+
+.catalog_card-mobile {
+    width: 280px;
+  position: relative;
+  background-color: $bg-card;
+  margin-bottom: 30px;
+
+  img {
+    width: 280px;
+    padding-right: 0;
+  }
+
+  h3 {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  @include jost(30px, $dark, 700);
+  }
+}
+
+.catalog_img-3 {
+    width: 236px;
+    height: 219px;
+    padding-top: 90px;
+}
+
+.catalog_img-4 {
+    width: 212px;
+    padding-top: 95px;
+}
+
+.catalog_img-5 {
+    width: 280px;
+    padding-top: 60px;
+}
+
+.catalog_2-mobile {
+    padding-top: 80px;
+
+    div {
+        margin-left: 0;
+        margin-top: 30px;
+
+        img {
+            height: 300px;
+        width: 320px;
+        }
+    }
+}
+
+
 @media (max-width: 1216px) {
     
     .catalog_card {

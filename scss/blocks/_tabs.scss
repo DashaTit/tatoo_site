@@ -144,7 +144,37 @@
     text-align: center;
 }
 
+.tab_text-mobile.default {
+    visibility: hidden;
+}
+
+.tab_text-mobile.active {
+    @include jost(20px, $orange, 400);
+}
+
+.tab_text-mobile.next {
+    margin-left: 10px;
+    @include jost(12px, $grey-2, 400);
+}
+
+.tab-text-mobile {
+    margin-bottom: 20px;
+}
+
+.show_more-mobile {
+    margin-top: -55px;
+}
+
+
 .product-card-mobile {
+    visibility: hidden;
+    display: none;
+}
+
+
+.product-card-mobile.active {
+    display: block;
+    visibility: visible;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
