@@ -21,7 +21,7 @@ getProducts();
 // console.log(getProducts())
 async function getProducts() {
     if (!productsData.length) {
-        const res = await fetch('/product.json');
+        const res = await fetch('../product.json');
         productsData = await res.json();
     }
 
