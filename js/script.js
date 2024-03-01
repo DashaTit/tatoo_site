@@ -1,11 +1,5 @@
 "use strict"
 
-import { basketIncludes,
-    setBasketLocalStorage,
-    getBasketLocalStorage,
-    getPrice,
-    checkingRelevanceValueBasket
- } from "../catalog/script/utils";
 
 const personal = document.getElementsByClassName('personal')[0];
 const popup = document.getElementsByClassName('popup')[0];
@@ -24,6 +18,7 @@ const bgCode = document.querySelector('.pin_code_body')
 const burger2 = document.querySelector('.burger-2')
 const personal2 = document.querySelector('.p-2')
 //poppup
+console.log('odv')
 document.body.style.overflowY = 'scroll';
 personal.addEventListener('click', {
   handleEvent(event) {
