@@ -185,3 +185,34 @@ body.addEventListener('click', function(event) {
         burgerPopup.classList.remove('active')
     }
   });
+
+
+//mobile menu
+const catalogMobile = document.querySelector('.catalog-text-mobile')
+const popupMobile = document.querySelector('.popup_catalog-mobile')
+const burgerMobile = document.querySelector('.b-3')
+const burgerMenuMobile = document.querySelector('.catalog-mobile')
+const escapeMenu = document.querySelector('.catalog-esc')
+
+catalogMobile.addEventListener('click', function() {
+    console.log('click')
+    popupMobile.classList.toggle('active')
+})
+
+burgerMobile.addEventListener('click', function() {
+    burgerMenuMobile.classList.add('active')
+})
+
+escapeMenu.addEventListener('click', function() {
+    burgerMenuMobile.classList.remove('active')
+
+})
+
+body.addEventListener('click', function(event) {
+    console.log('click')
+    //if you click on anything except the modal itself or the "open modal" link, close the modal
+    if (!event.target.closest(".catalog-mobile") && (!event.target.closest(".b-3"))) {
+        console.log('ty debilka')
+        burgerMenuMobile.classList.remove('active')
+    }
+});
