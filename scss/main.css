@@ -1810,6 +1810,62 @@ footer ul li:hover {
     margin-left: 0;
   }
 }
+.p-c {
+  padding-top: 90px;
+}
+
+.promocode {
+  display: none;
+}
+
+.promocod-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.promocod-card {
+  margin-top: 30px;
+  width: 390px;
+  font-family: "jost", sans-serif;
+  color: #3E424B;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #fff;
+}
+.promocod-card h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.promocod-card p {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.promocod-card button {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+  width: 280px;
+  background-color: #FAF6F2;
+  border: 2px #BB8C5F solid;
+  padding: 18px 22px;
+  font-family: "jost", sans-serif;
+  color: #3E424B;
+  font-size: 20px;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+.promocod-card button:hover {
+  background-color: #BB8C5F;
+}
+
 body {
   background-color: #050402;
 }
