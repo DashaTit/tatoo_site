@@ -1866,6 +1866,298 @@ footer ul li:hover {
   background-color: #BB8C5F;
 }
 
+@media (max-width: 1216px) {
+  .bascket_style {
+    position: relative;
+  }
+
+  .bascket_num {
+    top: -18px;
+    right: -18px;
+    position: absolute;
+    background-color: #BB8C5F;
+    width: 24px;
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "jost", sans-serif;
+    color: #FAF6F2;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .second_nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .header_categories, .header_brends {
+    transition: all 0.3s ease-in;
+  }
+  .header_categories:hover, .header_brends:hover {
+    color: #BB8C5F;
+    cursor: pointer;
+  }
+
+  .popup-burger {
+    width: 670px;
+    position: absolute;
+    z-index: 0;
+    top: -100px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+  }
+  .popup-burger .burger_content {
+    width: 670px;
+    font-family: "jost", sans-serif;
+    color: #3E424B;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  .popup-burger .header_categories.active {
+    color: #BB8C5F;
+  }
+  .popup-burger .popup_header {
+    width: 570px;
+    display: flex;
+    background-color: #F5F5F5;
+  }
+  .popup-burger .popup_header h1 {
+    margin-right: 30px;
+  }
+
+  .burger-categories {
+    width: 670px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .burger-brends {
+    width: 670px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .popup-burger.active {
+    width: 670px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .burger-categories.active {
+    width: 670px;
+    background-color: #F5F5F5;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+  }
+  .burger-categories.active ul li {
+    margin-bottom: 15px;
+  }
+  .burger-categories.active ul:first-child {
+    margin-right: 30px;
+  }
+
+  .burger-brends.active {
+    width: 760px;
+    margin-top: -205px;
+    background-color: #F5F5F5;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+  }
+  .burger-brends.active ul li {
+    margin-bottom: 15px;
+  }
+  .burger-brends.active ul {
+    margin-right: 30px;
+  }
+
+  .header_brends.active {
+    width: 670px;
+    color: #BB8C5F;
+  }
+
+  .promocod-card {
+    margin-top: 30px;
+    width: 350px;
+    font-family: "jost", sans-serif;
+    color: #3E424B;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #fff;
+  }
+  .promocod-card img {
+    width: 350px;
+  }
+  .promocod-card h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  .promocod-card p {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  .promocod-card button {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 280px;
+    background-color: #FAF6F2;
+    border: 2px #BB8C5F solid;
+    padding: 18px 22px;
+    font-family: "jost", sans-serif;
+    color: #3E424B;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.5s;
+  }
+  .promocod-card button:hover {
+    background-color: #BB8C5F;
+  }
+
+  footer .footer-blocks {
+    height: 400px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .vert_line {
+    height: 1px;
+    width: 100%;
+    margin-bottom: 70px;
+    margin-top: 70px;
+  }
+  footer .info {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .comp-tab {
+    display: none;
+  }
+
+  .second_nav {
+    display: none;
+  }
+
+  .mobile {
+    position: relative;
+  }
+
+  .nav-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    position: relative;
+    padding-bottom: 14px;
+  }
+
+  .catalog-mobile {
+    top: 0;
+    width: 100%;
+    margin-top: -14px;
+    margin-bottom: 20px;
+    position: absolute;
+    display: none;
+    background-color: #050402;
+  }
+
+  .catalog-mobile.active {
+    display: block;
+    z-index: 54983895;
+  }
+  .catalog-mobile.active ul {
+    margin-right: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .catalog-mobile.active ul .li-2 {
+    font-family: "jost", sans-serif;
+    color: #FAF6F2;
+    font-size: 16px;
+    font-weight: 300;
+    transition: all 0.5s ease-in-out;
+  }
+  .catalog-mobile.active ul .li-2:hover {
+    color: #BB8C5F;
+  }
+  .catalog-mobile.active ul li, .catalog-mobile.active ul .catalog-text-mobile {
+    font-family: "jost", sans-serif;
+    color: #FAF6F2;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+  .catalog-mobile.active ul li:hover, .catalog-mobile.active ul .catalog-text-mobile:hover {
+    color: #BB8C5F;
+  }
+  .catalog-mobile.active .popup_catalog-mobile {
+    display: none;
+  }
+  .catalog-mobile.active .popup_catalog-mobile.active {
+    display: block;
+  }
+
+  .catalog_header-mobile {
+    margin-top: 14px;
+    margin-left: 20px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .catalog_header-mobile .buscket_style-mobile {
+    margin-top: 10px;
+    position: relative;
+  }
+  .catalog_header-mobile .buscket_style-mobile .bascket_num-mobile {
+    position: absolute;
+    top: -9px;
+    margin-right: 5px;
+  }
+
+  .line-mobile {
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #BB8C5F;
+  }
+
+  .footer-blocks-mobile {
+    text-align: center;
+    display: block;
+    height: 400px;
+  }
+  .footer-blocks-mobile .info {
+    display: block;
+  }
+  .footer-blocks-mobile .info .ul-li {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-blocks-mobile .info .ul-li ul {
+    margin-left: 0;
+  }
+}
 body {
   background-color: #050402;
 }
