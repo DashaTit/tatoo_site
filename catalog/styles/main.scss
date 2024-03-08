@@ -37,6 +37,13 @@ $white: #FAF6F2;
   font-weight: $weight;
 }
 
+.catalog-mobile {
+    display: none;
+}
+
+.navv-3 {
+    display: none;
+}
 
 @media (max-width: 1216px) {
     .container {
@@ -49,6 +56,9 @@ $white: #FAF6F2;
 }
 
 @media (max-width: 767px) {
+    .catalog-mobile {
+        display: block;
+    }
     .container {
         max-width: 320px;
         margin-left: auto;
@@ -63,6 +73,10 @@ $white: #FAF6F2;
 
     .comp-tab {
         display: none;
+    }
+
+    .navv-3 {
+        display: block;
     }
 }
 
